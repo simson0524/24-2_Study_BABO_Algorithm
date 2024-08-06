@@ -35,8 +35,13 @@
 
 ### 2. 재귀 (김윤주)
 - `import sys; sys.setrecursionlimit(10 ** 6)` <- 재귀로 문제를 풀 때는 해당 코드는 필수다! ([출처](https://fuzzysound.github.io/sys-setrecursionlimit))
+1. 1주차 과제 코드 리뷰
+2. 재귀 이론 설명
+    - 꼬리 재귀
 - 과제
-    - [백준 1074 - Z (S1)](https://www.acmicpc.net/problem/1074)  <!-- 조금 난이도 있는 문제인 것 같기는 해.-->
+    - [백준 4779 - 칸토어 집합 (S3)](https://www.acmicpc.net/problem/4779)
+    - [백준 1182 - 부분 수열의 합 (S2)](https://www.acmicpc.net/problem/1182)
+    - [백준 1759 - 암호 만들기 (G5)](https://www.acmicpc.net/problem/1759)
 
 
 
