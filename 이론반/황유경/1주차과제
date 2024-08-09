@@ -1,0 +1,204 @@
+# 1018_체스판 다시 칠하기
+## 오답
+# N X M 보드 입력받음
+n, m = map(int,input().split(" "))
+
+arr = []
+for _ in range(n):
+    arr.append(list(map(str, input())))
+
+# 덧칠 갯수 기록 리스트 정의
+cnt=[]
+
+# 최소 덧칠 갯수 기록변수
+best_update = -1
+# (0,0)~(n-7,m-7) 원본 보드 좌표 검사
+for N in range(n-7):
+    for M in range(m-7):
+      repaint = 0
+
+      # W로 시작하는 체스판
+      if arr[N][M] == "W":
+
+
+        #print("W로 시작함")
+
+        # 8 X 8 보드 검사
+        for row in range(N, N+8, +1):
+          for col in range(M, M+8, +1):
+
+              # 짝수 칸인 경우
+              if (row+col)%2==0:
+                    # W로 칠해야함
+                    if arr[row][col]!='W':
+                      repaint+=1
+                    else:
+                      continue
+              #홀수 칸인 경우
+              else:
+                    # B로 칠해야함
+                    if arr[row][col]=='W':
+
+                      repaint+=1
+
+                    else:
+                      continue
+
+          # 덧칠 갯수 기록 갱신
+          cnt.append(repaint)
+
+      # B로 시작하는 체스판
+      else:
+
+        #print("B로 시작함")
+
+        # 8 X 8 보드 검사
+        for row in range(N, N+8, +1):
+          for col in range(M, M+8, +1):
+              # 짝수 칸인 경우
+              if (row+col)%2==0:
+                    # B로 칠해야함
+                    if arr[row][col]!='B':
+                      repaint+=1
+                    else:
+                      continue
+              #홀수 칸인 경우
+              else:
+                    # W로 칠해야함
+                    if arr[row][col]=='B':
+                      repaint+=1
+                    else:
+                      continue
+          # 덧칠 갯수 기록 갱신
+          cnt.append(repaint)
+
+
+
+      #print(cnt)
+
+
+print(min(cnt))
+
+## 정답
+# N X M 보드 입력받음
+n, m = map(int,input().split(" "))
+
+
+arr = []
+for _ in range(n):
+    arr.append(list(map(str, input())))
+
+
+# 최소 덧칠 갯수 기록변수
+best_update = -1
+
+# (0,0)~(n-7,m-7) 원본 보드 좌표 검사
+for N in range(n-7):
+    for M in range(m-7):
+
+        white_first = 0
+        black_first = 0
+        example_update = 0
+
+        # 임의의 8 X 8 보드 검사
+        for row in range(N, N+8, +1):
+            for col in range(M, M+8, +1):
+
+                # 흰 & 검 시작 2가지 상태, 검사
+                if((row + 1) % 2 != 0):
+                    if((col + 1) % 2 != 0):
+                        if(arr[row][col] != "W"):
+                            white_first += 1
+                        else:
+                            black_first += 1
+                    else:
+                        if(arr[row][col] != "B"):
+                            white_first += 1
+                        else:
+                            black_first += 1
+                else:
+                    if((col + 1) % 2 != 0):
+                        if(arr[row][col] != "B"):
+                            white_first += 1
+                        else:
+                            black_first += 1
+                    else:
+                        if(arr[row][col] != "W"):
+                            white_first += 1
+                        else:
+                            black_first += 1
+
+        # 임의의 보드 검사 완료
+        if (white_first > black_first):
+            example_update = black_first
+        else:
+            example_update = white_first
+
+        # 임의의 보드 최소갯수와 기록된 최소 갯수 비교
+        if (best_update == -1 or best_update > example_update):
+            best_update = example_update
+
+        # print(best_update, end =", ")
+
+print(best_update)
+
+# 18870_좌표 압축
+## 정답
+import sys
+
+# 좌표 개수 입력
+N = int(input())
+
+# 입력 숫자를 공백 기준으로 분리
+# 문자열 리스트 -> 정수형 리스트로 받아오기
+arr = list(map(int, input().split()))
+
+#정렬
+arr_sorted = sorted(list(set(arr)))
+
+dic = {}
+for i in range(len(arr_sorted)):
+  dic[arr_sorted[i]] = i
+
+for num in arr:
+  print(dic[num], end=" ")
+
+# 프로그래머스_연속된 부분 수열의 합
+## 정답
+def solution(sequence, k):
+  # 투 포인터 정의
+  start, end = 0, 0
+  # 부분 수열의 합 초기화
+  sum=sequence[0]
+  #부분 수열 최소 길이 정의
+  min_len = 1000001
+  #정답 리스트 정의
+  arr=[]
+
+  while start <= end and end<len(sequence):
+
+    if sum == k:
+      # 새로운 정답 리스트의 길이가 최소라면
+      if end - start + 1 < min_len :
+        # 부분 수열 최소 길이 갱신
+        min_len = end - start + 1
+        # 부분 수열을 정답 리스트로
+        arr = [start, end]
+
+      # 다음 스타터 포인터부터 다시 집계하기 위해
+      sum -= sequence[start]
+      # 스타트 포인터 오른쪽으로 이동
+      start += 1
+
+    elif sum < k :
+      # 엔드 포인터 오른쪽으로 이동
+      end += 1
+      # 부분 수열의 합 갱신
+      if end < len(sequence) :
+        sum += sequence[end]
+
+    elif sum > k :
+      sum -= sequence[start]
+      start += 1
+
+  return arr
