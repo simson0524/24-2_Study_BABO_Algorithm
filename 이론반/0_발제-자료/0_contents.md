@@ -24,7 +24,7 @@
     - 시간복잡도 표 공유 및 같이보기
 - 과제
     - [백준 1018 - 체스판 다시 칠하기 (S4)](https://www.acmicpc.net/problem/1018)
-    - [백준 11870 - 좌표압축 (S2)](https://www.acmicpc.net/problem/18870)
+    - [백준 18870 - 좌표압축 (S2)](https://www.acmicpc.net/problem/18870)
     - [프로그래머스 - 연속된 부분수열의 합 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/178870)
 
 
