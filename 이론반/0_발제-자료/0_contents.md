@@ -24,7 +24,7 @@
     - 시간복잡도 표 공유 및 같이보기
 - 과제
     - [백준 1018 - 체스판 다시 칠하기 (S4)](https://www.acmicpc.net/problem/1018)
-    - [백준 11870 - 좌표압축 (S2)](https://www.acmicpc.net/problem/18870)
+    - [백준 18870 - 좌표압축 (S2)](https://www.acmicpc.net/problem/18870)
     - [프로그래머스 - 연속된 부분수열의 합 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/178870)
 
 
@@ -35,8 +35,13 @@
 
 ### 2. 재귀 (김윤주)
 - `import sys; sys.setrecursionlimit(10 ** 6)` <- 재귀로 문제를 풀 때는 해당 코드는 필수다! ([출처](https://fuzzysound.github.io/sys-setrecursionlimit))
+1. 1주차 과제 코드 리뷰
+2. 재귀 이론 설명
+    - 꼬리 재귀
 - 과제
-    - [백준 1074 - Z (S1)](https://www.acmicpc.net/problem/1074)  <!-- 조금 난이도 있는 문제인 것 같기는 해.-->
+    - [백준 4779 - 칸토어 집합 (S3)](https://www.acmicpc.net/problem/4779)
+    - [백준 1182 - 부분 수열의 합 (S2)](https://www.acmicpc.net/problem/1182)
+    - [백준 1759 - 암호 만들기 (G5)](https://www.acmicpc.net/problem/1759)
 
 
 
@@ -45,11 +50,25 @@
 
 
 ### 3. DFS/BFS (원종빈)
-- 그래프 기초, 그래프의 두 가지 표현법 
-- 알고리즘 기초 및 비교분석
-- DFS/BFS 변형
+1. post-OT
+    - 과제로 나가는 문제들 난이도/개수 괜찮은지 조사
+    - git commit message 작성법
+2. 기초 자료구조
+    - 스택과 덱(deque)
+    - 그래프
+        - 그래프의 두 가지 표현법 
+3. DFS/BFS
+    - DFS/BFS 기초
+    - DFS/BFS 변형
+    - DFS/BFS 확장
 - 과제
-    - [백준 1697 - 숨바꼭질 (S1)](https://www.acmicpc.net/problem/1697) <!-- 조금 난이도 있는 문제인 것 같다. DP로도 풀 수 있다! -->
+    - [백준 1260 - DFS와 BFS (S2)](https://www.acmicpc.net/problem/1260)
+    - [백준 11724 - 연결 요소의 개수 (S2)](https://www.acmicpc.net/problem/11724)
+    - [백준 1743 - 음식물 피하기(S1)](https://www.acmicpc.net/problem/1743)
+- 번외 (난이도가 조금 있어서, 과제로 나가지는 않지만 재밌는 문제들)
+    - [백준 7576 - 토마토 (G5)](https://www.acmicpc.net/problem/7576)
+    - [백준 1697 - 숨바꼭질 (S1)](https://www.acmicpc.net/problem/1697) 
+<!-- 조금 난이도 있는 문제인 것 같다. DP로도 풀 수 있다! -->
 
 
 
