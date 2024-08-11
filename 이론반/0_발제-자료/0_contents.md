@@ -64,7 +64,7 @@
 - 과제
     - [백준 1260 - DFS와 BFS (S2)](https://www.acmicpc.net/problem/1260)
     - [백준 11724 - 연결 요소의 개수 (S2)](https://www.acmicpc.net/problem/11724)
-    - [백준 1012 - 유기농 배추 (S2)](https://www.acmicpc.net/problem/1012)
+    - [백준 1743 - 음식물 피하기(S1)](https://www.acmicpc.net/problem/1743)
 - 번외 (난이도가 조금 있어서, 과제로 나가지는 않지만 재밌는 문제들)
     - [백준 7576 - 토마토 (G5)](https://www.acmicpc.net/problem/7576)
     - [백준 1697 - 숨바꼭질 (S1)](https://www.acmicpc.net/problem/1697) 
