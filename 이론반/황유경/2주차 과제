@@ -1,0 +1,94 @@
+## 4779 칸토어
+
+#3등분한 왼,오른쪽 줄은 재귀로 계속 분할
+def cantor(n):
+  # 마지막으로 출력되는건 - 한줄
+    if n == 1:
+        return "-"
+    else:
+      # 3등분한 왼쪽 줄은 재귀함수의 매개변수로 전달
+        left = cantor(n // 3)
+        #3등분한 가운데는 공백으로 제거
+        center = " " * (n // 3)
+        # 3등분한 오른쪽 줄은 재귀함수의 매개변수로 전달
+        right = cantor(n // 3)
+        return left + center + right
+
+while True:
+    try:
+      # 입력값 받음
+        N = int(input())
+      # 3**입력값을 n으로
+        rst = cantor(3 ** N)
+        print(rst)
+    #종료조건
+    except:
+        break
+## 백준 1182
+
+#입력단
+# n: 리스트 길이, 부분집합의 최대 원소 갯수
+# s: 목표 숫자
+n, s = map(int,input().split())
+n_list = list(map(int,input().split()))
+
+# 부분집합의 수 초기화
+cnt = 0
+
+# idx: 부분 집합의 원소 갯수
+# sum: 부분 집합 원소의 합
+def dfs(idx,sum):
+
+  # 부분집합의 수를 집계
+	global cnt
+
+  # 리스트를 끝까지 탐색하면 종료
+  # 종료조건
+	if idx >= n:
+		return
+  # 리스트 원소 누적
+	sum += n_list[idx]
+  # 누적 값이 s와 같다면 부분집합 완성
+  # 부분 집합의 갯수 갱신
+	if sum == s:
+		cnt += 1
+
+  # 현재 인덱스를 기준으로 오른쪽 인덱스 값들을 누적하여 부분집합 구성
+  # 부분집합에 탐색한 인덱스를 포함 할 경우
+	dfs(idx+1,sum)
+  # 부분집합에 탐색한 인덱스를 포합하지 않을 경우
+	dfs(idx+1,sum-n_list[idx])
+# 0번 인덱스부터 탐색 시작
+# 목표 합계 숫자는 0
+dfs(0,0)
+print(cnt)
+
+## 오답
+## 백준 1759
+
+# 입력단
+vowel = ['a', 'e', 'i', 'o', 'u']
+
+L, C = map(int, input().split())
+words = input().split()
+
+#입력받은 분자열 사전순 정렬
+words.sort() 
+
+answer = []
+
+# 암호열 조건 체크
+for word in words: 
+    consonant_count = 0
+    vowel_count = 0
+
+    # 자음 모음 개수 세기
+    for alpha in word:
+        if alpha in "aeiou":
+            consonant_count += 1
+        else:
+            vowel_count += 1
+
+    # 모음이 1개 이상, 자음이 2 개 이상이면 출력
+    if consonant_count >= 1 and vowel_count >= 2:
+        print("".join(word))
