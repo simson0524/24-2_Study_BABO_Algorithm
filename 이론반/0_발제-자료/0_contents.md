@@ -77,8 +77,19 @@
 
 
 ### 4. 그리디 (박지원)
-- 이코테 교재 동전문제 <!-- 이 문제가 나중에 다룰 DP 동전문제랑도 연결되어서, 이걸로 설명하면 좋을 듯! -->
-- 그리디는 그리디하게 풀어도 최적해가 구해지는지 아닌지 증명하는 과정도 필요하다. ([참고](https://gazelle-and-cs.tistory.com/59))  <!-- 이 부분은 사실 건너뛰어도 되기는 함. -->
+1. 3주차 과제 코드리뷰
+2. Greedy
+    1. Greedy 정당성 증명
+    2. 거스름돈 문제
+3. DP
+    1. 구현 방식: top-down vs bottom-up
+- 과제
+    - [백준 1931 - 회의실 배정 (S1)](https://www.acmicpc.net/problem/1931)
+    - [백준 11501 - 주식 (S2)](https://www.acmicpc.net/problem/11501)
+    - [백준 1912 - 연속합 (S2)](https://www.acmicpc.net/problem/1912)
+- 번외
+    - [백준 11000 - 강의실 배정 (G5)](https://www.acmicpc.net/problem/11000)
+    - [프로그래머스 42884 - 단속카메라 (lv3)](https://school.programmers.co.kr/learn/courses/30/lessons/42884)
 
 
 
