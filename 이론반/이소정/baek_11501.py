@@ -8,7 +8,7 @@ for _ in range(t) :
     max = 0
     for i in (len(price)-1,-1,-1) :
         if max < price[i] :
-            price[i] = max 
+            max = price[i] 
         else : # 현재 가격이 현재 최대 가격보다 작다면 차익 실현
             interest += max - price[i]
     print(interest)
