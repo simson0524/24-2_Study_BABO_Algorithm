@@ -97,11 +97,35 @@
 
 
 
-### 5. 다이나믹 프로그래밍 (이종문)
-- ~~로 나눈 나머지를 출력하세요
-- 군장싸는 문제, 타일링 문제
+### 5. 다이나믹 프로그래밍 (유종문)
 
+1. 4주차 과제 코드리뷰
 
+2. 다이나믹 프로그래밍 (동적계획법) [[PDF]](./5_다이나믹-프로그래밍/5_동적계획법.pdf)
+    - DP의 필요성 및 메모이제이션 기법 소개
+    - DP 예제1 : 피보나치 수열
+    - DP 예제2 : 진우의 달 여행 (Large)
+    - DP 풀이 팁
+    - Greedy 와의 비교
+
+3. DP 유형 소개
+    - LIS: Longest Increasing Subsequence
+    - LCS: Longest Common Substring
+    - Knsapsack
+    - TSP: Traveling Salesman Problem
+
+4. 기타 문제 풀이 팁
+
+<br>
+
+- 과제
+    - [백준 11726 - $2 \times N$ 타일링 (S3)](https://www.acmicpc.net/problem/11726)
+    - [백준 9095 - 1, 2, 3 더하기 (S3)](https://www.acmicpc.net/problem/9095)
+    - [백준 1932 - 정수 삼각형 (S1)](https://www.acmicpc.net/problem/1932)
+- 번외
+    - [백준 2579 - 계단 오르기 (S3)](https://www.acmicpc.net/problem/2579)
+    - [백준 11727 - $2 \times N$ 타일링 2 (S3)](https://www.acmicpc.net/problem/11727)
+    - 꼭 더 많은 문제들 풀어보세요 🔥
 
 <br>
 
