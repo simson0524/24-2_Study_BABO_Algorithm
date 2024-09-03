@@ -116,7 +116,6 @@
 
 4. 기타 문제 풀이 팁
 
-<br>
 
 - 과제
     - [백준 11726 - $2 \times N$ 타일링 (S3)](https://www.acmicpc.net/problem/11726)
@@ -132,7 +131,20 @@
 
 
 ### 6. 최단경로 알고리즘 (이상윤)
-
+1. 사전 지식
+    - 최단거리의 개념
+    - BFS/DFS와의 비교
+2. 알고리즘 소개
+    - 다익스트라 알고리즘
+    - 플로이드-와샬 알고리즘
+    - 벨만포드 알고리즘
+3. 문제풀이시 마인드셋
+- 과제
+    - [백준 14284 - 간선 이어가기2 (G5)](https://www.acmicpc.net/problem/14284)
+    - [백준 14938 - 서강그라운드 (G4)](https://www.acmicpc.net/problem/14938)
+- 번외
+    - [백준 13549 - 숨바꼭질 3 (G5)](https://www.acmicpc.net/problem/13549)
+    - [백준 11404 - 플로이드 (G5)](https://www.acmicpc.net/problem/11404)
 
 <br>
 
